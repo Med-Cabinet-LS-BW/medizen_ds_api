@@ -1,3 +1,3 @@
 # MediZen Recommendation
 
-A simple Flask API to recommend strains for the Med Cabinet app.
+A simple back-end Flask API to recommend cannabis strains in the MediZen app.
