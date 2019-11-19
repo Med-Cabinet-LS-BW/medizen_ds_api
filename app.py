@@ -27,7 +27,7 @@ tfidf = pickle.load(open("data/vect_01.pkl", "rb"))
 nn = pickle.load(open("data/knn_01.pkl", "rb"))
 
 
-def recommend(request, n=5):
+def recommend(request, n=10):
     """
     Creates a dataframe with top n recommended strains.
     
@@ -53,20 +53,20 @@ def recommend(request, n=5):
     request_tfidf = pd.DataFrame(request_sparse.todense())
 
     # Return a list of indexes
-    top5 = nn.kneighbors([request_tfidf][0], n_neighbors=5)[1][0].tolist()
+    top = nn.kneighbors([request_tfidf][0], n_neighbors=n)[1][0].tolist()
 
     # Send recomendations to DataFrame
-    recs_df = df.iloc[top5].reset_index()
+    recs_df = df.iloc[top].reset_index()
 
-    # Extract pd.Series of only "Strain"
-    recs_dict = recs_df[["index", "Strain"]].to_json(orient="records")
+    # Extract pd.Series of only "Strain" and convert to JSON
+    recs_dict = recs_df["index"].to_json(orient="records")
 
     return recs_dict
 
 
 # TODO: Determine if `n` should be route parameter
-@app.route("/rec/<effects>")
-def rec(effects):
+@app.route("/rec/<int:n>/<effects>")
+def rec(effects, n=10):
     """
     Primary recommendation route.
     
@@ -82,7 +82,7 @@ def rec(effects):
     """
 
     try:
-        top = recommend(effects)
+        top = recommend(effects, n)
     except Exception as e:
         raise e
         top = "There was an error with the request."
@@ -103,7 +103,7 @@ def strains():
 
     try:
         # TODO: Return index+name or just index
-        strains = df2[["index", "Strain"]].to_json(orient="records")
+        strains = df2.to_json(orient="records")
     except Exception as e:
         raise e
         strains = "There was an error with the request."
