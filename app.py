@@ -110,3 +110,6 @@ def strains():
 
     return strains
 
+
+if __name__ == "__main__":
+    app.run()
