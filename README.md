@@ -7,6 +7,7 @@ based on desired effects.
   - [Usage](#usage)
     - [All Strains](#all-strains)
     - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
   - [Project Information](#project-information)
     - [Data](#data)
 
@@ -63,6 +64,10 @@ Returns:
 ]
 ```
 
+### Testing
+
+Flask API is being tested in Advanced Rest Client.
+
 ---
 
 ## Project Information
@@ -89,5 +94,6 @@ integrated into the Flask app and also handles the requests, returning the appro
   - [Usage](#usage)
     - [All Strains](#all-strains)
     - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
   - [Project Information](#project-information)
     - [Data](#data)
