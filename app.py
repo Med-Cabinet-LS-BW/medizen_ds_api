@@ -37,7 +37,7 @@ def recommend(request, n=10):
         List of user's desired effects, concatenated into a single string.
         Separated by commas.
     n : int, optional
-        Number of recommendations to return, by default 5
+        Number of recommendations to return, by default 10.
     
     Returns
     -------
@@ -72,6 +72,8 @@ def rec(effects, n=10):
     
     Parameters
     ----------
+    n : int, optional
+        Number of recommendations to return, by default 10.
     effects : string
         List of desired effects, comma-delimited.
 
