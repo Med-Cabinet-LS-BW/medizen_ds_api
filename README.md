@@ -3,11 +3,13 @@
 A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
 based on desired effects.
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
+  - [Project Information](#project-information)
+    - [Data](#data)
 
 ---
 
@@ -62,9 +64,17 @@ Returns:
 ]
 ```
 
+### Testing
+
+Flask API is being tested in Advanced Rest Client.
+
 ---
 
 ## Project Information
+
+[Product Vision Document](https://www.notion.so/meds/Product-Vision-3bad180a0bc24c09b27d1b9c4f30c4ba)
+
+[DS initial presentation](https://drive.google.com/file/d/1SWlKu2PWBgG7bUC-hGwdAX8NGLoWuYiA/view?usp=sharing)
 
 ### Data
 
@@ -75,14 +85,15 @@ The recommendation API uses the Cannabis Strains dataset, uploaded to Kaggle.
 We used K-Means Clustering to create 5 categories using the effects and description of
 each strain.
 
-Next we pickled a vectorizer and KNN model, which allows the trained model to be
-integrated into the Flask app, which also handles the requests, returning the
-appropriate JSON data.
+Subsequently, we pickled a vectorizer and KNN model, which allows the trained model to be
+integrated into the Flask app and also handles the requests, returning the appropriate JSON data.
 
 ---
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
+  - [Project Information](#project-information)
+    - [Data](#data)
