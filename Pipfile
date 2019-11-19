@@ -11,6 +11,7 @@ ipython = "*"
 flask-shell-ipython = "*"
 urllib3 = "*"
 jupyter = "*"
+scikit-learn = "*"
 
 [packages]
 flask = "*"
