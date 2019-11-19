@@ -1,15 +1,15 @@
-# MediZen Recommendation
+# MediZen Recommendation API
 
-A simple back-end Flask API to recommend cannabis strains in the MediZen app.
+A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
+based on desired effects.
 
-- [MediZen Recommendation](#medizen-recommendation)
-  - [Usage](#usage)
-    - [All Strains](#all-strains)
-      - [Example Strains Request](#example-strains-request)
-    - [Recommended Strains](#recommended-strains)
-      - [Example Recommendation Request](#example-recommendation-request)
-  - [Project Information](#project-information)
-    - [Data](#data)
+- [Usage](#usage)
+  - [All Strains](#all-strains)
+  - [Recommended Strains](#recommended-strains)
+- [Project Information](#project-information)
+  - [Data](#data)
+
+---
 
 ## Usage
 
@@ -19,27 +19,48 @@ Endpoint to return a complete list of strains.
 
     /strains
 
-Parameters: None
+**Parameters:** None
 
-Returns: JSON array containing all available strains.
+**Returns:** JSON array containing all available strains.
 
-#### Example Strains Request
+Example:
 
     medizen.io/api/strains
+
+---
 
 ### Recommended Strains
 
 Endpoint to return a list of recommendations.
 
-    /rec/<effects>
+    /rec/<n>/<effects>
 
-Parameters: Effects: list of desired effects, comma-delimited.
+**Parameters:**
 
-Returns: JSON array of top n recommendations.
+- n: integer - number of recommended strains to return
+- effects: string - list of desired effects, comma-delimited (no spaces)
 
-#### Example Recommendation Request
+**Returns:** JSON array containing the `id` of top `n` recommendations.
+
+Example:
 
     medizen.io/api/rec/Uplifted,Happy,Relaxed,Energetic
+
+Returns:
+
+```json
+[
+    {
+        "index": 1629,
+        "Strain": "Platinum-Kush"
+    },
+    {
+        "index": 1722,
+        "Strain": "Purple-Tangie"
+    },
+    ...
+]
+```
 
 ---
 
@@ -54,4 +75,14 @@ The recommendation API uses the Cannabis Strains dataset, uploaded to Kaggle.
 We used K-Means Clustering to create 5 categories using the effects and description of
 each strain.
 
-Next we pickled a vectorizer and KNN model to create an API that output the top 5 recommendations.
+Next we pickled a vectorizer and KNN model, which allows the trained model to be
+integrated into the Flask app, which also handles the requests, returning the
+appropriate JSON data.
+
+---
+
+- [Usage](#usage)
+  - [All Strains](#all-strains)
+  - [Recommended Strains](#recommended-strains)
+- [Project Information](#project-information)
+  - [Data](#data)
