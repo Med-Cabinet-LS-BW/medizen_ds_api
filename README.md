@@ -1,7 +1,7 @@
 # MediZen Recommendation API
 
 A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
-based on desired effects. test
+based on desired effects.
 
 - [MediZen Recommendation API](#medizen-recommendation-api)
   - [Usage](#usage)
