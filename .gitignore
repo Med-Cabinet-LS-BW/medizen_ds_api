@@ -1,5 +1,5 @@
 # ====== Project-Specific ====== #
-db_data/
+*.pkl
 dox/
 
 # Misc
