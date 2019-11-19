@@ -3,11 +3,12 @@
 A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
 based on desired effects.
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+  - [Project Information](#project-information)
+    - [Data](#data)
 
 ---
 
@@ -81,8 +82,9 @@ appropriate JSON data.
 
 ---
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+  - [Project Information](#project-information)
+    - [Data](#data)
