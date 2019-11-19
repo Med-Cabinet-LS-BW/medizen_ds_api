@@ -3,13 +3,12 @@
 A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
 based on desired effects.
 
-- [MediZen Recommendation API](#medizen-recommendation-api)
-  - [Usage](#usage)
-    - [All Strains](#all-strains)
-    - [Recommended Strains](#recommended-strains)
-    - [Testing](#testing)
-  - [Project Information](#project-information)
-    - [Data](#data)
+- [Usage](#usage)
+  - [All Strains](#all-strains)
+  - [Recommended Strains](#recommended-strains)
+  - [Testing](#testing)
+- [Project Information](#project-information)
+  - [Data](#data)
 
 ---
 
@@ -46,7 +45,7 @@ Endpoint to return a list of recommendations.
 
 Example:
 
-    https://medizen-ds.herokuapp.com/rec/Uplifted,Happy,Relaxed,Energetic
+    https://medizen-ds.herokuapp.com/rec/2/Uplifted,Happy,Relaxed,Energetic
 
 Returns:
 
@@ -54,13 +53,10 @@ Returns:
 [
     {
         "index": 1629,
-        "Strain": "Platinum-Kush"
     },
     {
         "index": 1722,
-        "Strain": "Purple-Tangie"
     },
-    ...
 ]
 ```
 
@@ -90,10 +86,9 @@ integrated into the Flask app and also handles the requests, returning the appro
 
 ---
 
-- [MediZen Recommendation API](#medizen-recommendation-api)
-  - [Usage](#usage)
-    - [All Strains](#all-strains)
-    - [Recommended Strains](#recommended-strains)
-    - [Testing](#testing)
-  - [Project Information](#project-information)
-    - [Data](#data)
+- [Usage](#usage)
+  - [All Strains](#all-strains)
+  - [Recommended Strains](#recommended-strains)
+  - [Testing](#testing)
+- [Project Information](#project-information)
+  - [Data](#data)
