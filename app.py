@@ -5,7 +5,7 @@ A simple back-end Flask API for recommending cannabis strains.
 """
 
 from flask import Flask
-import pickle 
+import pickle
 import pandas as pd
 
 import os
@@ -54,14 +54,15 @@ def recommend(request, n=5):
 
     # Return a list of indexes
     top5 = nn.kneighbors([request_tfidf][0], n_neighbors=5)[1][0].tolist()
-    
+
     # Send recomendations to DataFrame
     recs_df = df.iloc[top5].reset_index()
 
     # Extract pd.Series of only "Strain"
     recs_dict = recs_df[["index", "Strain"]].to_json(orient="records")
-    
+
     return recs_dict
+
 
 # TODO: Determine if `n` should be route parameter
 @app.route("/rec/<effects>")
