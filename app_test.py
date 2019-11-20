@@ -1,7 +1,7 @@
 """Testing App Flask with Unittest and Pytest"""
 
 import unittest
-from app import *
+from app import app
 
 
 class appTest(unittest.TestCase):
