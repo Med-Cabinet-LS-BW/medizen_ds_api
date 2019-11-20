@@ -3,12 +3,13 @@
 A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
 based on desired effects.
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-  - [Testing](#testing)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
+  - [Project Information](#project-information)
+    - [Data](#data)
 
 ---
 
@@ -62,7 +63,7 @@ Returns:
 
 ### Testing
 
-Flask API is being tested in Advanced Rest Client.
+Flask API was tested in Advanced Rest Client and unittests were processed on file app_test.py
 
 ---
 
@@ -86,9 +87,10 @@ integrated into the Flask app and also handles the requests, returning the appro
 
 ---
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-  - [Testing](#testing)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
+  - [Project Information](#project-information)
+    - [Data](#data)
