@@ -82,7 +82,6 @@ def rec(effects, n=10):
         top = recommend(effects, n)
     except Exception as e:
         raise e
-        top = "There was an error with the request."
 
     return str(top)
 
