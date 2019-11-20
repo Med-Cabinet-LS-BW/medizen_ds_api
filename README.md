@@ -46,7 +46,7 @@ Endpoint to return a list of recommendations.
 
 Example:
 
-    https://medizen-ds.herokuapp.com/rec/5/indica,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet
+    https://medizen-ds.herokuapp.com/rec/5/sativa,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet
 
 Returns:
 
