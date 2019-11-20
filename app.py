@@ -30,7 +30,7 @@ nn = pickle.load(open("data/knn_02.pkl", "rb"))
 def recommend(request, n=10):
     """
     Creates a dataframe with top n recommended strains.
-    
+
     Parameters
     ----------
     request : string
@@ -38,7 +38,7 @@ def recommend(request, n=10):
         Separated by commas.
     n : int, optional
         Number of recommendations to return, by default 10.
-    
+
     Returns
     -------
     recs
@@ -64,7 +64,7 @@ def recommend(request, n=10):
 def rec(effects, n=10):
     """
     Primary recommendation route.
-    
+
     Parameters
     ----------
     n : int, optional
