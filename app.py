@@ -22,9 +22,9 @@ df = pd.read_csv("data/cannabis.csv")
 # Extract index as column
 df2 = df.reset_index()
 
-# Load in the pickles
-tfidf = pickle.load(open("data/vect_01.pkl", "rb"))
-nn = pickle.load(open("data/knn_01.pkl", "rb"))
+# Load in the pickled vectorizer and knn model
+tfidf = pickle.load(open("data/vect_02.pkl", "rb"))
+nn = pickle.load(open("data/knn_02.pkl", "rb"))
 
 
 def recommend(request, n=10):
@@ -45,23 +45,18 @@ def recommend(request, n=10):
         Returns a list of recommended strains.
     """
 
-    # Transform
-    request = pd.Series(request)
-    request_sparse = tfidf.transform(request)
+    # Create vector from request string
+    request_vec = tfidf.transform([request])
 
-    # Send to df
-    request_tfidf = pd.DataFrame(request_sparse.todense())
+    # Use knn model to calculate the top n strains
+    # The recommendations are the top n nearest points (vectors) to the
+    # vectorized request, based on the vectorized dataset (vocab).
+    rec_id = nn.kneighbors(request_vec.todense(), n_neighbors=n)[1][0]
 
-    # Return a list of indexes
-    top = nn.kneighbors([request_tfidf][0], n_neighbors=n)[1][0].tolist()
+    # Convert np.ndarray to pd.Series then to JSON
+    rec_json = pd.Series(rec_id).to_json(orient="records")
 
-    # Send recomendations to DataFrame
-    recs_df = df.iloc[top].reset_index()
-
-    # Extract pd.Series of only "Strain" and convert to JSON
-    recs_dict = recs_df["index"].to_json(orient="records")
-
-    return recs_dict
+    return rec_json
 
 
 # TODO: Determine if `n` should be route parameter
@@ -104,7 +99,6 @@ def strains():
     """
 
     try:
-        # TODO: Return index+name or just index
         strains = df2.to_json(orient="records")
     except Exception as e:
         raise e
