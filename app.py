@@ -102,10 +102,9 @@ def strains():
         strains = df2.to_json(orient="records")
     except Exception as e:
         raise e
-        strains = "There was an error with the request."
 
     return strains
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
