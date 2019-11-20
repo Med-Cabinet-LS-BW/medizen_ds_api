@@ -34,29 +34,29 @@ Example:
 
 Endpoint to return a list of recommendations.
 
-    /rec/<n>/<effects>
+    /rec/<n>/<request>
 
 **Parameters:**
 
 - n: integer - number of recommended strains to return
-- effects: string - list of desired effects, comma-delimited (no spaces)
+- request: string - list of desired type,effects,flavors
+  - comma-delimited, without spaces (see example below)
 
 **Returns:** JSON array containing the `id` of top `n` recommendations.
 
 Example:
 
-    https://medizen-ds.herokuapp.com/rec/2/Uplifted,Happy,Relaxed,Energetic
+    https://medizen-ds.herokuapp.com/rec/5/indica,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet
 
 Returns:
 
 ```json
 [
-    {
-        "index": 1629,
-    },
-    {
-        "index": 1722,
-    },
+    1530,
+    2107,
+    1156,
+    1528,
+    2312,
 ]
 ```
 
