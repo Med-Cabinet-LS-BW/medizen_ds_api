@@ -30,7 +30,7 @@ nn = pickle.load(open("data/knn_02.pkl", "rb"))
 def recommend(request, n=10):
     """
     Creates a dataframe with top n recommended strains.
-    
+
     Parameters
     ----------
     request : string
@@ -38,7 +38,7 @@ def recommend(request, n=10):
         Separated by commas.
     n : int, optional
         Number of recommendations to return, by default 10.
-    
+
     Returns
     -------
     recs
@@ -64,7 +64,7 @@ def recommend(request, n=10):
 def rec(effects, n=10):
     """
     Primary recommendation route.
-    
+
     Parameters
     ----------
     n : int, optional
@@ -82,7 +82,6 @@ def rec(effects, n=10):
         top = recommend(effects, n)
     except Exception as e:
         raise e
-        top = "There was an error with the request."
 
     return str(top)
 
@@ -102,7 +101,6 @@ def strains():
         strains = df2.to_json(orient="records")
     except Exception as e:
         raise e
-        strains = "There was an error with the request."
 
     return strains
 
