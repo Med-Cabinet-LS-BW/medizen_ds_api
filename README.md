@@ -4,7 +4,6 @@ A simple back-end Flask API to serve recommended cannabis strains in the MediZen
 based on desired effects.
 
 - [MediZen Recommendation API](#medizen-recommendation-api)
-  - [- Deployment](#deployment)
   - [Usage](#usage)
     - [All Strains](#all-strains)
     - [Recommended Strains](#recommended-strains)
@@ -13,6 +12,7 @@ based on desired effects.
     - [Data](#data)
   - [Deployment](#deployment)
   - [Recommendations](#recommendations)
+
 ---
 
 ## Usage
@@ -96,7 +96,6 @@ Find the last version of the Flask API on:
 ---
 
 - [MediZen Recommendation API](#medizen-recommendation-api)
-  - [- Deployment](#deployment)
   - [Usage](#usage)
     - [All Strains](#all-strains)
     - [Recommended Strains](#recommended-strains)
