@@ -11,7 +11,6 @@ based on desired effects.
   - [Project Information](#project-information)
     - [Data](#data)
   - [Deployment](#deployment)
-  - [Recommendations](#recommendations)
 
 ---
 
@@ -27,7 +26,10 @@ Endpoint to return a complete list of strains.
 
 **Returns:** JSON array containing all available strains.
 
-Example response:
+Example:
+` https://medizen-ds.herokuapp.com/strains`
+
+Returns:
 
     `[{"index":0,"Strain":"100-Og","Type":"hybrid","Rating":4.0,"Effects":"Creative,Energetic,Tingly,Euphoric,Relaxed","Flavor":"Earthy,Sweet,Citrus","Description":"$100 OG is a 50\/50 hybrid strain that packs a strong punch. The name supposedly refers to both its strength and high price when it first started showing up in Hollywood. As a plant, $100 OG tends to produce large dark green buds with few stems. Users report a strong body effect of an indica for pain relief with the more alert, cerebral feeling thanks to its sativa side."},{"index":1,"Strain":"98-White-Widow","Type":"hybrid","Rating":4.7,"Effects":"Relaxed,Aroused,Creative,Happy,Energetic","Flavor":"Flowery,Violet,Diesel","Description":"The \u201898 Aloha White Widow is an especially potent cut of White Widow that has grown in renown alongside Hawaiian legends like Maui Wowie and Kona Gold. This White Widow phenotype reeks of diesel and skunk and has a rich earthy taste with intermittent notes of hash. Its buds are coated in trichomes, giving its dark foliage a lustrous glint to go along with its room-filling odor. This one-hitter-quitter uplifts the mind with mind-bending euphoria that materializes in the body as airy relaxation. \u201898 Aloha White Widow is available from Pua Mana 1st Hawaiian Pakal\u014dl\u014d Seed Bank. \u00a0"},...`
 
@@ -47,9 +49,9 @@ Endpoint to return a list of recommendations.
 
 **Returns:** JSON array containing the `id` of top `n` recommendations.
 
-Example response:
+Example:
 
-   `[1530,2107,1156,1528,2312]`
+    https://medizen-ds.herokuapp.com/rec/5/sativa,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet
 
 Returns:
 
@@ -92,7 +94,8 @@ integrated into the Flask app and also handles the requests, returning the appro
 Find the last version of the Flask API on:
 
 [Strains](https://medizen-ds.herokuapp.com/strains)
-[Recommendations](https://medizen-ds.herokuapp.com/rec/5/indica,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet)
+[Recommendations example](https://medizen-ds.herokuapp.com/rec/5/indica,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet)
+
 ---
 
 - [MediZen Recommendation API](#medizen-recommendation-api)
@@ -103,4 +106,3 @@ Find the last version of the Flask API on:
   - [Project Information](#project-information)
     - [Data](#data)
   - [Deployment](#deployment)
-  - [Recommendations](#recommendations)
