@@ -11,6 +11,11 @@ ipython = "*"
 flask-shell-ipython = "*"
 urllib3 = "*"
 jupyter = "*"
+matplotlib = "*"
+seaborn = "*"
+pyjanitor = "*"
+plotly = "*"
+pandas-profiling = "*"
 
 [packages]
 flask = "*"
