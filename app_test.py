@@ -6,9 +6,9 @@ from app import *
 
 class appTest(unittest.TestCase):
     '''
-    Test APP 
+    Test APP
     to run use: python -m unittest app_test.py
-    or 
+    or
     to run use: python -m pytest
     '''
 
@@ -20,7 +20,8 @@ class appTest(unittest.TestCase):
                             talkative,euphoric,creative,
                             focused,spicy,tangy,sweet''')
         self.assertEqual(rv.status, '200 OK')
-        self.assertEqual(rv.data, b'''[696,942,1228,1335,1953,2120,1761,523]''')
+        self.assertEqual(rv.data, b'''[696,942,1228,1335,
+                                       1953,2120,1761,523]''')
 
     def test_get_5_recommendations_succeeds(self):
         rv = self.app.get('''/rec/5/hybrid,euphoric,
@@ -31,11 +32,11 @@ class appTest(unittest.TestCase):
     def test_get_5_recommendations_without_filters_404(self):
         rv = self.app.get('''/rec/5''')
         self.assertEqual(rv.status, '404 NOT FOUND')
-    
+
     def test_get_recommendations_without_result_count_404(self):
         rv = self.app.get('''/rec''')
         self.assertEqual(rv.status, '404 NOT FOUND')
-    
+
     def test_get_strains_succeeds(self):
         rv = self.app.get("/strains")
         assert rv.status == '200 OK'
