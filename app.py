@@ -13,6 +13,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# api.basilica.ai/embed/text/english
+BASILICA = basilica.Connection(config('BASILICA_KEY'))
+import BASILICA
+
 app = Flask(__name__)
 
 
@@ -46,7 +50,10 @@ def recommend(request, n=10):
     """
 
     # Create vector from request string
-    request_vec = tfidf.transform([request])
+    # request_vec = tfidf.transform([request])
+    # Use Basilica
+    request_vec = BASILICA.embed_sentence(request, model='generic')
+
 
     # Use knn model to calculate the top n strains
     # The recommendations are the top n nearest points (vectors) to the
@@ -82,6 +89,7 @@ def rec(effects, n=10):
         top = recommend(effects, n)
     except Exception as e:
         raise e
+        top = "There was an error with the request."
 
     return str(top)
 
@@ -101,6 +109,7 @@ def strains():
         strains = df2.to_json(orient="records")
     except Exception as e:
         raise e
+        strains = "There was an error with the request."
 
     return strains
 
