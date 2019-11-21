@@ -16,6 +16,7 @@ seaborn = "*"
 pyjanitor = "*"
 plotly = "*"
 pandas-profiling = "*"
+spacy = "*"
 
 [packages]
 flask = "*"
