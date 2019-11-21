@@ -3,12 +3,14 @@
 A simple back-end Flask API to serve recommended cannabis strains in the MediZen app
 based on desired effects.
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-  - [Testing](#testing)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
+  - [Project Information](#project-information)
+    - [Data](#data)
+  - [Deployment](#deployment)
 
 ---
 
@@ -25,8 +27,11 @@ Endpoint to return a complete list of strains.
 **Returns:** JSON array containing all available strains.
 
 Example:
+` https://medizen-ds.herokuapp.com/strains`
 
-    https://medizen-ds.herokuapp.com/strains
+Returns:
+
+    `[{"index":0,"Strain":"100-Og","Type":"hybrid","Rating":4.0,"Effects":"Creative,Energetic,Tingly,Euphoric,Relaxed","Flavor":"Earthy,Sweet,Citrus","Description":"$100 OG is a 50\/50 hybrid strain that packs a strong punch. The name supposedly refers to both its strength and high price when it first started showing up in Hollywood. As a plant, $100 OG tends to produce large dark green buds with few stems. Users report a strong body effect of an indica for pain relief with the more alert, cerebral feeling thanks to its sativa side."},{"index":1,"Strain":"98-White-Widow","Type":"hybrid","Rating":4.7,"Effects":"Relaxed,Aroused,Creative,Happy,Energetic","Flavor":"Flowery,Violet,Diesel","Description":"The \u201898 Aloha White Widow is an especially potent cut of White Widow that has grown in renown alongside Hawaiian legends like Maui Wowie and Kona Gold. This White Widow phenotype reeks of diesel and skunk and has a rich earthy taste with intermittent notes of hash. Its buds are coated in trichomes, giving its dark foliage a lustrous glint to go along with its room-filling odor. This one-hitter-quitter uplifts the mind with mind-bending euphoria that materializes in the body as airy relaxation. \u201898 Aloha White Widow is available from Pua Mana 1st Hawaiian Pakal\u014dl\u014d Seed Bank. \u00a0"},...`
 
 ---
 
@@ -46,7 +51,7 @@ Endpoint to return a list of recommendations.
 
 Example:
 
-    https://medizen-ds.herokuapp.com/rec/5/sativa,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet
+`https://medizen-ds.herokuapp.com/rec/5/sativa,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet`
 
 Returns:
 
@@ -62,7 +67,7 @@ Returns:
 
 ### Testing
 
-Flask API is being tested in Advanced Rest Client.
+Flask API was tested in Advanced Rest Client and unittests were processed on file app_test.py
 
 ---
 
@@ -84,11 +89,20 @@ each strain.
 Subsequently, we pickled a vectorizer and KNN model, which allows the trained model to be
 integrated into the Flask app and also handles the requests, returning the appropriate JSON data.
 
+## Deployment
+
+Find the last version of the Flask API on:
+
+[Strains](https://medizen-ds.herokuapp.com/strains)
+[Recommendations example](https://medizen-ds.herokuapp.com/rec/5/indica,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet)
+
 ---
 
-- [Usage](#usage)
-  - [All Strains](#all-strains)
-  - [Recommended Strains](#recommended-strains)
-  - [Testing](#testing)
-- [Project Information](#project-information)
-  - [Data](#data)
+- [MediZen Recommendation API](#medizen-recommendation-api)
+  - [Usage](#usage)
+    - [All Strains](#all-strains)
+    - [Recommended Strains](#recommended-strains)
+    - [Testing](#testing)
+  - [Project Information](#project-information)
+    - [Data](#data)
+  - [Deployment](#deployment)
