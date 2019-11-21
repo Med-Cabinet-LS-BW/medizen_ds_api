@@ -75,6 +75,7 @@ Flask API was tested in Advanced Rest Client and unittests were processed on fil
 
 [Product Vision Document](https://www.notion.so/meds/Product-Vision-3bad180a0bc24c09b27d1b9c4f30c4ba)
 
+
 [DS initial presentation](https://drive.google.com/file/d/1SWlKu2PWBgG7bUC-hGwdAX8NGLoWuYiA/view?usp=sharing)
 
 ### Data
@@ -94,6 +95,7 @@ integrated into the Flask app and also handles the requests, returning the appro
 Find the last version of the Flask API on:
 
 [Strains](https://medizen-ds.herokuapp.com/strains)
+
 [Recommendations example](https://medizen-ds.herokuapp.com/rec/5/indica,energetic,talkative,euphoric,creative,focused,orange,tangy,sweet)
 
 ---
