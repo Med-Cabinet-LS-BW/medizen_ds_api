@@ -17,6 +17,7 @@ pyjanitor = "*"
 plotly = "*"
 pandas-profiling = "*"
 spacy = "*"
+jupyterlab = "*"
 
 [packages]
 flask = "*"
