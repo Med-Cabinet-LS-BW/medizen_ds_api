@@ -1,4 +1,5 @@
 # ====== Project-Specific ====== #
+docs/notebooks/*.pkl
 # *.pkl
 knn_01.pkl
 dox/
