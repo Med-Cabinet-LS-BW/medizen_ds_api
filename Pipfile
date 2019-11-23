@@ -14,9 +14,6 @@ jupyter = "*"
 matplotlib = "*"
 seaborn = "*"
 pyjanitor = "*"
-plotly = "*"
-pandas-profiling = "*"
-spacy = "*"
 jupyterlab = "*"
 
 [packages]
