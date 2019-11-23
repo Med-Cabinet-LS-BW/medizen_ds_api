@@ -23,8 +23,11 @@ df = pd.read_csv("data/cannabis.csv")
 df2 = df.reset_index()
 
 # Load in the pickled vectorizer and knn model
-tfidf = pickle.load(open("data/vect_02.pkl", "rb"))
-nn = pickle.load(open("data/knn_02.pkl", "rb"))
+with open("data/vect_02.pkl", "rb") as p:
+    tfidf = pickle.load(p)
+
+with open("data/knn_02.pkl", "rb") as p:
+    nn = pickle.load(p)
 
 
 def recommend(request, n=10):
